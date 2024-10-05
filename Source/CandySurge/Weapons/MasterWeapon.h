@@ -17,10 +17,20 @@ public:
 	// Sets default values for this actor's properties
 	AMasterWeapon();
 
+	UFUNCTION(BlueprintCallable)
+	void Fire(FVector Target);
+
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	const UDA_WeaponData* WeaponData;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Weapon")
 	USkeletalMeshComponent* WeaponMesh;
+	
+protected:
+
+	virtual void BeginPlay() override;
+
+private:
+	ACharacter* OwnerCharacter;
 
 };

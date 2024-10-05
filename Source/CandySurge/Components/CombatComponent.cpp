@@ -69,7 +69,7 @@ FVector UCombatComponent::GetTargetFromPlayerView() const
 	bool bHit = GetOwner()->GetWorld()->LineTraceSingleByChannel(HitResult, PlayerViewLoc, End, ECollisionChannel::ECC_Visibility, TraceParams);
 
 	// Optionally draw debug line
-	DrawDebugLine(GetWorld(), PlayerViewLoc, End, FColor::Blue, false, 1.0f);
+	//DrawDebugLine(GetWorld(), PlayerViewLoc, End, FColor::Blue, false, 1.0f);
 
 	// Return the impact point if there's a blocking hit, otherwise return the trace end
 	return bHit ? HitResult.ImpactPoint : End;

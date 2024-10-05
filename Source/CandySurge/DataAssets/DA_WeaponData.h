@@ -33,4 +33,19 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	EWeaponType WeaponType;
 	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+    float FireRate;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+	UParticleSystem* HitParticleEffect;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+	UAnimationAsset* FireAnimation;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	bool bIsAutomatic;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+	FName FiringSocketName;
+	
 };

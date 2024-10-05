@@ -17,6 +17,8 @@ public:
 	// Sets default values for this component's properties
 	UCombatComponent();
 	void SpawnAndAttachWeapons();
+
+	UFUNCTION(BlueprintCallable)
 	FVector GetTargetFromPlayerView() const;
 
 	//Direct reference to the primary weapon actor
