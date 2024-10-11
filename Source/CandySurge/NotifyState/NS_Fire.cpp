@@ -14,16 +14,17 @@ void UNS_Fire::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* 
 	Super::NotifyBegin(MeshComp, Animation, TotalDuration, EventReference);
 
 	OwnerCharacter = Cast<ACharacter>(UGameplayStatics::GetPlayerCharacter(MeshComp->GetWorld(), 0));
-
-	CombatComp = Cast<UCombatComponent>(OwnerCharacter->GetComponentByClass(UCombatComponent::StaticClass()));
-
+	
 	if (OwnerCharacter)
 	{
 
 		if (OwnerCharacter->IsLocallyControlled())
 		{
+			CombatComp = Cast<UCombatComponent>(OwnerCharacter->GetComponentByClass(UCombatComponent::StaticClass()));
+
 			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("NOTIFY Fired"));
 			CombatComp->EquippedWeapon->Fire(CombatComp->GetTargetFromPlayerView());
+			
 		}
 	}
 	

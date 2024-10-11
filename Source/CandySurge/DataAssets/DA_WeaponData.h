@@ -47,5 +47,8 @@ public:
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	FName FiringSocketName;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
+	UCurveFloat* RecoilCurve;
 	
 };

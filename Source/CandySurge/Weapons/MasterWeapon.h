@@ -18,7 +18,7 @@ public:
 	AMasterWeapon();
 
 	UFUNCTION(BlueprintCallable)
-	void Fire(FVector Target);
+	virtual void Fire(FVector Target);
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly)
 	const UDA_WeaponData* WeaponData;
