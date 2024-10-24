@@ -18,7 +18,7 @@ enum class EWeaponType : uint8
 
 
 UCLASS()
-class CANDYSURGE_API UDA_WeaponData : public UDataAsset
+class CANDYSURGE_API UDA_WeaponData : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 	

@@ -15,17 +15,21 @@ class CANDYSURGE_API ARifleClass : public AMasterWeapon
 	GENERATED_BODY()
 
 public:
-	void DecrementFiringTime();
+	//void DecrementFiringTime();
 	virtual void Fire(FVector Target) override;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bIsFiring;
+
+protected:
+	virtual void BeginPlay() override;
 
 private:
 	float FiringTime = 0;
 	FTimerHandle RecoilRecoveryTimerHandle;
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,meta = (AllowPrivateAccess = "true"))
-	double MaxFiringTime = 2;
+	double MaxFiringTime = 1;
 
+	
 };
